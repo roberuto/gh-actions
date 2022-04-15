@@ -1,0 +1,13 @@
+name: Fun with Github Actions
+on: [push]
+env:
+  ENVIRONMENT: staging
+jobs:
+  fun-job:
+    name: The Job Name
+    runs-on: ubuntu-latest
+    step:
+    - name: Checkout
+      use: actions/checkout@v2
+    - name: Echo $ENVIRONMENT
+      run: echo ${{ env.ENVIRONMENT }}
