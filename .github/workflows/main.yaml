@@ -6,8 +6,8 @@ jobs:
   fun-job:
     name: The Job Name
     runs-on: ubuntu-latest
-    step:
+    steps:
     - name: Checkout
-      use: actions/checkout@v2
+      uses: actions/checkout@v2
     - name: Echo $ENVIRONMENT
       run: echo ${{ env.ENVIRONMENT }}
